@@ -27,7 +27,7 @@ def setup_search(api):
     user_followers = api.get_user(user_id).followers_count
 
     ids = []
-    for fid in Cursor(api.followers_ids, screen_name=screen_name, count=5000).items():
+    for fid in Cursor(api.followers_ids, screen_name=screen_name, count=4999).items():
         ids.append(fid)
 
     info = []
